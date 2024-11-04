@@ -1,0 +1,31 @@
+# deprecated
+NAME: "FF++ NeuralTextures"
+DESCRIPTION: ""
+SAVE_PATH: ""
+GPUS:
+  - 2
+BATCH_SIZE: 64
+BATCH_EQU: 0
+SEED: 4231
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+DATASET:
+  TRAIN_ROOT:
+    - "face-forensics/manipulated_sequences/NeuralTextures"
+  LEVEL: "c23"
+  SAMPLE: 1
+
+VALID:
+  VALID_ITER: 250
+  
+AIM:
+  USE: False
+  VERSION: 1
+  PROB: 0.3
+  
+

@@ -1,0 +1,46 @@
+# deprecated
+NAME: "AIM_64"
+DESCRIPTION: "basic with negative samples and AIM"
+SAVE_PATH: ""
+GPUS:
+  - 3
+BATCH_SIZE: 96
+BATCH_EQU: 1
+SEED: 423
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+TRAIN:
+  LR: 5e-4
+  WD: 1e-4
+  MILESTONES:
+    - 9
+    - 15
+    - 21
+  TOTAL_EPOCH: 30
+  REAL_PROB: 0.5
+
+DATASET:
+  TRAIN_ROOT:
+    - "face-forensics/manipulated_sequences/Deepfakes"
+    - "face-forensics/manipulated_sequences/Face2Face"
+    - "face-forensics/manipulated_sequences/FaceShifter"
+    - "face-forensics/manipulated_sequences/FaceSwap"
+    - "face-forensics/manipulated_sequences/NeuralTextures"
+    - "face-forensics/original_sequences"
+  LEVEL: "c23"
+  SAMPLE: 20
+
+VALID:
+  VALID_ITER: 250
+  
+AIM:
+  USE: True
+  VERSION: 2
+  PROB: 0.3
+  
+

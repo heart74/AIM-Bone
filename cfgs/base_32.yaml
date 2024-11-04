@@ -1,0 +1,41 @@
+# deprecated
+NAME: "base"
+DESCRIPTION: "basic with negative samples"
+SAVE_PATH: ""
+GPUS:
+  - 3
+BATCH_SIZE: 32
+BATCH_EQU: 0
+SEED: 423
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+TRAIN:
+  LR: 5e-4
+  WD: 1e-4
+  MILESTONES:
+    - 12
+  TOTAL_EPOCH: 15
+  REAL_PROB: 0.5
+
+DATASET:
+  TRAIN_ROOT:
+    - "face-forensics/manipulated_sequences/Deepfakes"
+    - "face-forensics/manipulated_sequences/Face2Face"
+    - "face-forensics/manipulated_sequences/FaceShifter"
+    - "face-forensics/manipulated_sequences/FaceSwap"
+    - "face-forensics/manipulated_sequences/NeuralTextures"
+    - "face-forensics/original_sequences"
+  LEVEL: "c23"
+  SAMPLE: 20
+
+AIM:
+  USE: True
+  VERSION: 1
+  PROB: 0.3
+  
+

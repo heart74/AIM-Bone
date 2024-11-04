@@ -1,0 +1,42 @@
+# deprecated
+NAME: "AIMv4_baseFF++v1_HQ"
+DESCRIPTION: "Noise Pattern v4 with FF++(No FaceShifter)"
+SAVE_PATH: ""
+GPUS:
+  - 2
+BATCH_SIZE: 32
+BATCH_EQU: 0
+SEED: 423
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+TRAIN:
+  LR: 5e-4
+  WD: 1e-4
+  MILESTONES:
+    - 9
+    - 15
+    - 21
+  TOTAL_EPOCH: 30
+  REAL_PROB: 0.5
+
+DATASET:
+  TRAIN_ROOT:
+    - "face-forensics/manipulated_sequences/Deepfakes"
+    - "face-forensics/manipulated_sequences/Face2Face"
+    - "face-forensics/manipulated_sequences/FaceSwap"
+    - "face-forensics/manipulated_sequences/NeuralTextures"
+    - "face-forensics/original_sequences"
+  LEVEL: "c23"
+  SAMPLE: 20
+
+AIM:
+  USE: True
+  VERSION: 4
+  PROB: 0.3
+  
+

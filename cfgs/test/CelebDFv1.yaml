@@ -1,0 +1,30 @@
+# deprecated
+NAME: "CelebDF_v1"
+DESCRIPTION: "test on CelebDF effi"
+SAVE_PATH: ""
+GPUS:
+  - 0
+BATCH_SIZE: 32
+BATCH_EQU: 0
+SEED: 423
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+DATASET:
+  TRAIN_ROOT:
+    - "Celeb-DF-v2-track/Celeb-real"
+    - "Celeb-DF-v2-track/Celeb-synthesis"
+    - "Celeb-DF-v2-track/YouTube-real"
+  LEVEL: "v1"
+  SAMPLE: 64
+
+AIM:
+  USE: False
+  VERSION: 1
+  PROB: 0.3
+  
+

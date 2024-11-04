@@ -1,0 +1,34 @@
+# deprecated
+NAME: "AIM2_base_reconstruct"
+DESCRIPTION: "reconstruction of origional image"
+SAVE_PATH: ""
+GPUS:
+  - 0
+BATCH_SIZE: 32
+BATCH_EQU: 0
+SEED: 423
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+TRAIN:
+  LR: 5e-4
+  WD: 1e-4
+  MILESTONES:
+    - 20
+    - 40
+    - 60
+  TOTAL_EPOCH: 80
+  REAL_PROB: 0.5
+
+DATASET:
+  TRAIN_ROOT:
+    - "face-forensics/original_sequences"
+  LEVEL: "c23"
+  SAMPLE: 20
+
+  
+

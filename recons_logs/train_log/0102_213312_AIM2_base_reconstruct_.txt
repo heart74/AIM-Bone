@@ -1,0 +1,38 @@
+AIM:
+  PROB: 0.3
+  USE: False
+  VERSION: 2
+BATCH_EQU: 0
+BATCH_SIZE: 32
+CAL_RES: 0
+DATASET:
+  LEVEL: c23
+  SAMPLE: 20
+  TRAIN_ROOT: ['face-forensics/original_sequences']
+DESCRIPTION: reconstruction of origional image
+GPUS: [0]
+IS_ALIGN: False
+MODEL:
+  BACKBONE: efficientnet-b0
+  PRETRAINED: 
+NAME: AIM2_base_reconstruct
+SAVE_PATH: 
+SEED: 423
+TRAIN:
+  LOG_ITER: 10
+  LR: 0.0005
+  MILESTONES: [20, 40, 60]
+  REAL_PROB: 0.5
+  TOTAL_EPOCH: 80
+  TRAIN_WORKER: 0
+  WD: 0.0001
+VALID:
+  VALID_ITER: 250
+  VALID_WORKER: 2
+device:  cuda
+==> Dataset loading...
+len of trainloader: 450
+len of valloader: 88
+Model Name: efficientnet-b0
+Number of parameter: Encoder: 4.01M  Decoder:  23.03M
+Train Epoch: 1/80 ...

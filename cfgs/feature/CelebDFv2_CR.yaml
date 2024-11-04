@@ -1,0 +1,24 @@
+# deprecated
+NAME: "CelebDF_v2"
+DESCRIPTION: "Celeb-real"
+SAVE_PATH: ""
+SEED: 1129
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+DATASET:
+  TRAIN_ROOT:
+    - "Celeb-DF-v2-track/Celeb-real"
+  LEVEL: "v2"
+  SAMPLE: 1
+
+AIM:
+  USE: False
+  VERSION: 1
+  PROB: 0.3
+  
+

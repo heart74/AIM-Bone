@@ -1,0 +1,30 @@
+# deprecated
+NAME: "CelebDF_v2_seed2"
+DESCRIPTION: "basic with negative samples"
+SAVE_PATH: ""
+GPUS:
+  - 2
+BATCH_SIZE: 32
+BATCH_EQU: 0
+SEED: 1129
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+DATASET:
+  TRAIN_ROOT:
+    - "Celeb-DF-v2-track/Celeb-real"
+    - "Celeb-DF-v2-track/Celeb-synthesis"
+    - "Celeb-DF-v2-track/YouTube-real"
+  LEVEL: "v2"
+  SAMPLE: 20
+
+AIM:
+  USE: False
+  VERSION: 1
+  PROB: 0.3
+  
+

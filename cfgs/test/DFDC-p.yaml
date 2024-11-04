@@ -1,0 +1,27 @@
+# deprecated
+NAME: "DFDC_preview"
+DESCRIPTION: "test on DFDC-p"
+SAVE_PATH: ""
+GPUS:
+  - 0
+BATCH_SIZE: 32
+BATCH_EQU: 0
+SEED: 423
+CAL_RES: 0
+IS_ALIGN: False
+
+MODEL:
+  BACKBONE: "efficientnet-b0"
+  PRETRAINED: ""
+
+DATASET:
+  TRAIN_ROOT:
+    - "DFDC-preview/frames"
+  LEVEL: ""
+  SAMPLE: 20
+
+AIM:
+  USE: False
+  VERSION: 1
+  PROB: 0.3
+  
